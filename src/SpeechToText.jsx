@@ -7,9 +7,6 @@ export default function SpeechToText() {
     const [result, setResult] = useState("");
 
     const mediaRecorderRef = useRef(null);
-    const audioChunksRef = useRef([]);
-
-    const API_KEY = "1e64eb54-24d1-4ce2-89ca-327905484e5f:f9caa827-e570-4542-9925-f3d75124b0ac";
 
     function handleClick() {
         if (!recording) {

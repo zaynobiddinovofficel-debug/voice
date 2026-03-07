@@ -84,8 +84,6 @@ export default function SpeechToText() {
 
   return (
     <div className="flex flex-col items-center gap-6 p-6">
-
-      {/* BUTTON */}
       <button
         onClick={handleClick}
         className={`w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition
@@ -94,21 +92,15 @@ export default function SpeechToText() {
       >
         {recording ? <Square size={32} /> : <Mic size={32} />}
       </button>
-
-      {/* STATUS */}
       <p className="text-lg font-medium text-gray-700">
         {recording ? "Gapiring..." : "Mikrofonni bosing"}
       </p>
-
-      {/* LOADING */}
       {loading && (
         <div className="flex items-center gap-2 text-blue-600">
           <Loader2 className="animate-spin" />
           <span>Ovoz qayta ishlanmoqda...</span>
         </div>
       )}
-
-      {/* RESULT */}
       <div className="w-[500px] min-h-[120px] bg-white border rounded-xl shadow p-5 text-lg">
         <span className="break-words">
           {result || "Natija shu yerda chiqadi..."}
